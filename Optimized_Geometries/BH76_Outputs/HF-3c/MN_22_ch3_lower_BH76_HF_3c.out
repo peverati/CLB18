@@ -1,0 +1,937 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.3 (devel), Q-Chem, Inc., Pleasanton, CA (2020)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Alam,  B. Albrecht,  
+ A. Aldossary,  E. Alguire,  S. A. Baeppler,  D. Barton,  Z. Benda,  
+ Y. A. Bernard,  E. J. Berquist,  K. B. Bravaya,  H. Burton,  K. Carter-Fenk,  
+ D. Casanova,  Chun-Min Chang,  Yunqing Chen,  A. Chien,  K. D. Closser,  
+ M. P. Coons,  S. Coriani,  S. Dasgupta,  A. L. Dempwolff,  M. Diedenhofen,  
+ Hainam Do,  R. G. Edgar,  Po-Tung Fang,  S. Faraji,  S. Fatehi,  
+ Qingguo Feng,  J. Fosso-Tande,  J. Gayvert,  Qinghui Ge,  A. Ghysels,  
+ G. Gidofalvi,  J. Gomes,  J. Gonthier,  S. Gulania,  A. Gunina,  D. Hait,  
+ M. W. D. Hanson-Heine,  S. Hammes-Schiffer,  P. H. P. Harbach,  
+ A. W. Hauser,  M. F. Herbst,  J. E. Herr,  E. G. Hohenstein,  Z. C. Holden,  
+ S. Houck,  Kerwin Hui,  B. C. Huynh,  M. Ivanov,  T.-C. Jagau,  Hyunjun Ji,  
+ B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,  
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,  
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,  
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,  
+ Kuan-Yu Liu,  E. Livshits,  M. Loipersberger,  A. Luenser,  P. Manohar,  
+ E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  
+ A. V. Marenich,  T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  P. Morgante,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ K. J. Oosterbaan,  J. A. Parkhill,  S. K. Paul,  F. Pavosevic,  Zheng Pei,  
+ T. M. Perrine,  F. Plasser,  P. Pokhilko,  S. Prager,  A. Prociuk,  
+ E. Ramos,  B. Rana,  D. R. Rehn,  F. Rob,  E. Rossomme,  M. Scheurer,  
+ M. Schneider,  N. Sergueev,  S. M. Sharada,  S. Sharma,  W. Skomorowski,  
+ D. W. Small,  T. Stauch,  C. J. Stein,  T. Stein,  Yu-Chuan Su,  
+ S. P. Veccham,  Zhen Tao,  A. J. W. Thom,  A. Tkatchenko,  T. Tsuchimochi,  
+ N. M. Tubman,  L. Vogt,  M. L. Vidal,  O. Vydrov,  M. A. Watson,  J. Wenzel,  
+ M. de Wergifosse,  T. A. Wesolowski,  A. White,  J. Witte,  A. Yamada,  
+ Jun Yang,  K. Yao,  S. Yeganeh,  S. R. Yost,  Zhi-Qiang You,  A. Zech,  
+ Igor Ying Zhang,  Xing Zhang,  Yan Zhao,  Ying Zhu,  B. R. Brooks,  
+ G. K. L. Chan,  C. J. Cramer,  M. S. Gordon,  W. J. Hehre,  A. Klamt,  
+ M. W. Schmidt,  C. D. Sherrill,  D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  
+ A. T. Bell,  N. A. Besley,  Jeng-Da Chai,  A. E. DePrince, III,  
+ R. A. DiStasio Jr.,  A. Dreuw,  B. D. Dunietz,  T. R. Furlani,  
+ Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  D. S. Lambrecht,  WanZhen Liang,  
+ C. Ochsenfeld,  V. A. Rassolov,  L. V. Slipchenko,  J. E. Subotnik,  
+ T. Van Voorhis,  J. M. Herbert,  A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.3.0 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.800.1 (Horizon Scraper).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Thu Oct 22 12:19:32 2020  
+
+Host: 
+0
+
+     Scratch files written to /home/pierpa/qchem_scratch/qchem9603//
+Processing $rem in /home/pierpa/qchem53_dev/config/preferences:
+Processing $rem in /home/pierpa/.qchemrc:
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$Comment
+Geometry optimizations for CLB18.
+$End
+
+$Rem
+SYMMETRY              False
+SYM_IGNORE            True
+JOBTYPE               Opt
+METHOD                HF-3c
+BASIS                 MINIX
+MAX_SCF_CYCLES        50
+SCF_ALGORITHM         DIIS
+SCF_PRINT             1
+SCF_FINAL_PRINT       1
+XC_GRID               000099000590
+MEM_TOTAL             20000
+MEM_STATIC            4000
+BLAS3_DFT             True
+New_DFT               True
+$End
+
+$Molecule
+0 2
+C 0.0000000000 0.0000000000 0.0000000000
+H 0.5386580820 0.9329831659 0.0000000000
+H 0.5386580820 -0.9329831659 0.0000000000
+H -1.0773161640 0.0000000000 0.0000000000
+$End
+
+
+--------------------------------------------------------------
+ Adding empirical dispersion correction 
+ ----------------------------------------------------------------
+ Doing -D3(BJ) with
+ s6 =   1.00000
+ s8 =   0.87770
+ a1 =   0.41710
+ a2 =   2.91490
+ -D3 energy without 3body term =     -0.0058683757 hartrees
+ ----------------------------------------------------------------
+ Adding gCP correction 
+ ----------------------------------------------------------------
+ gCP energy =      0.0183981599 hartrees
+ ------------------------------------------------------
+ Correction for Bais Set Incompleteness Error in  HF-3c
+ ------------------------------------------------------
+ SRB energy =     -0.0148117802 hartrees
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.0000000000     0.0000000000     0.0000000000
+    2      H       0.5386580820     0.9329831659     0.0000000000
+    3      H       0.5386580820    -0.9329831659     0.0000000000
+    4      H      -1.0773161640     0.0000000000     0.0000000000
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =           9.69009241 hartrees
+ There are        5 alpha and        4 beta electrons
+ Requested basis set is MINIX
+ There are 6 shells and 8 basis functions
+
+ Total QAlloc Memory Limit  20000 MB
+ Mega-Array Size      3911 MB
+ MEM_STATIC part      4000 MB
+ A cutoff of  1.0D-11 yielded     21 shell pairs
+ There are        39 function pairs
+ Smallest overlap matrix eigenvalue = 2.52E-01
+
+ Scale SEOQF with 1.000000e+00/1.000000e+00/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000019 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 9.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ Dispersion:   Grimme D3
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A unrestricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ Alpha HF Exchange    Energy =  -3.04000010985463
+ Beta HF Exchange     Energy =  -3.04000010985463
+ One-Electron (alpha) Energy = -35.58977853150669
+ One-Electron (beta)  Energy = -35.58977853150669
+ Total Coulomb        Energy =  28.76437857740187
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -38.8050862982      1.51e-01  
+ Alpha HF Exchange    Energy =  -3.33696033832884
+ Beta HF Exchange     Energy =  -2.86524900793113
+ One-Electron (alpha) Energy = -38.11505929615765
+ One-Electron (beta)  Energy = -33.25025484267633
+ Total Coulomb        Energy =  28.58842389301336
+    2     -39.2890071850      1.21e-02  
+ Alpha HF Exchange    Energy =  -3.33796552165119
+ Beta HF Exchange     Energy =  -2.86183341952330
+ One-Electron (alpha) Energy = -38.17135774928664
+ One-Electron (beta)  Energy = -33.18385246282892
+ Total Coulomb        Energy =  28.56802238951966
+    3     -39.2968943567      4.06e-03  
+ Alpha HF Exchange    Energy =  -3.34143188652159
+ Beta HF Exchange     Energy =  -2.85965533006250
+ One-Electron (alpha) Energy = -38.22479145245872
+ One-Electron (beta)  Energy = -33.13275627653996
+ Total Coulomb        Energy =  28.57041278264767
+    4     -39.2981297559      1.37e-03  
+ Alpha HF Exchange    Energy =  -3.34424682401156
+ Beta HF Exchange     Energy =  -2.85853890382165
+ One-Electron (alpha) Energy = -38.25795311644131
+ One-Electron (beta)  Energy = -33.09700842033314
+ Total Coulomb        Energy =  28.56931587008459
+    5     -39.2983389874      3.59e-04  
+ Alpha HF Exchange    Energy =  -3.34524272845135
+ Beta HF Exchange     Energy =  -2.85823932395842
+ One-Electron (alpha) Energy = -38.26920243409315
+ One-Electron (beta)  Energy = -33.08556001451228
+ Total Coulomb        Energy =  28.56979830476852
+    6     -39.2983537892      6.99e-06  
+ Alpha HF Exchange    Energy =  -3.34524368151306
+ Beta HF Exchange     Energy =  -2.85823671353854
+ One-Electron (alpha) Energy = -38.26925467065641
+ One-Electron (beta)  Energy = -33.08544796501808
+ Total Coulomb        Energy =  28.56973683188298
+    7     -39.2983537918      1.29e-06  
+ Alpha HF Exchange    Energy =  -3.34524377466555
+ Beta HF Exchange     Energy =  -2.85823658865817
+ One-Electron (alpha) Energy = -38.26926531348339
+ One-Electron (beta)  Energy = -33.08543877871379
+ Total Coulomb        Energy =  28.56973825657300
+    8     -39.2983537919      2.50e-08  
+ Alpha HF Exchange    Energy =  -3.34524370456938
+ Beta HF Exchange     Energy =  -2.85823660731190
+ One-Electron (alpha) Energy = -38.26926455327950
+ One-Electron (beta)  Energy = -33.08543953240881
+ Total Coulomb        Energy =  28.56973819862164
+    9     -39.2983537919      8.61e-10  Convergence criterion met
+ ---------------------------------------
+ Alpha HF Exchange    Energy =  -3.34524370456938
+ Beta HF Exchange     Energy =  -2.85823660731190
+ One-Electron (alpha) Energy = -38.26926455327950
+ One-Electron (beta)  Energy = -33.08543953240881
+ Total Coulomb        Energy =  28.56973819862164
+ SCF time:   CPU 0.36s  wall 1.00s 
+<S^2> =          0.760916913
+ Alpha HF Exchange    Energy =  -3.34524370456938
+ Beta HF Exchange     Energy =  -2.85823660731190
+ One-Electron (alpha) Energy = -38.26926455327950
+ One-Electron (beta)  Energy = -33.08543953240881
+ Total Coulomb        Energy =  28.56973819862164
+ Nuclear repulsion Energy =   9.69009240707584
+ SCF   energy in the final basis set =      -39.2983537919
+ Total energy in the final basis set =      -39.2983537919
+
+ --------------------------------------------------------------
+
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+
+ Alpha MOs
+ -- Occupied --
+-11.1196  -0.9392  -0.5688  -0.5688  -0.3969
+ -- Virtual --
+  0.6438   0.7703   0.7703
+
+ Beta MOs
+ -- Occupied --
+-11.0852  -0.8369  -0.5534  -0.5534
+ -- Virtual --
+  0.2423   0.7005   0.7915   0.7915
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)    Spin (a.u.)
+  --------------------------------------------------------
+      1 C                    -0.352553       1.248509
+      2 H                     0.117518      -0.082836
+      3 H                     0.117518      -0.082836
+      4 H                     0.117518      -0.082836
+  --------------------------------------------------------
+  Sum of atomic charges =    -0.000000
+  Sum of spin   charges =     1.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                    -0.00000000
+    Dipole Moment (Debye)
+         X          -0.00000000      Y           0.00000000      Z           0.00000000
+       Tot           0.00000000
+    Quadrupole Moments (Debye-Ang)
+        XX          -7.29004244     XY           0.00000000     YY          -7.29004244
+        XZ           0.00000000     YZ          -0.00000000     ZZ          -8.23433289
+    Octopole Moments (Debye-Ang^2)
+       XXX          -0.75941287    XXY           0.00000000    XYY           0.75941286
+       YYY           0.00000000    XXZ           0.00000000    XYZ           0.00000000
+       YYZ           0.00000000    XZZ          -0.00000000    YZZ           0.00000000
+       ZZZ           0.00000000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX         -13.78642250   XXXY           0.00000000   XXYY          -4.59547417
+      XYYY           0.00000000   YYYY         -13.78642251   XXXZ           0.00000000
+      XXYZ          -0.00000000   XYYZ           0.00000000   YYYZ          -0.00000000
+      XXZZ          -3.82504846   XYZZ           0.00000000   YYZZ          -3.82504846
+      XZZZ           0.00000000   YZZZ          -0.00000000   ZZZZ          -7.28602774
+ -----------------------------------------------------------------
+ Mayer SCF Bond Order, atomic valence on the diagonal:
+
+            1           2           3           4
+    1   2.9240570   0.9746857   0.9746857   0.9746857
+    2   0.9746857   0.9793277   0.0023210   0.0023210
+    3   0.9746857   0.0023210   0.9793277   0.0023210
+    4   0.9746857   0.0023210   0.0023210   0.9793277
+
+
+ Calculating analytic gradient of the SCF energy
+ ------------------------------------------------------
+ Correction for Bais Set Incompleteness Error in  HF-3c
+ ------------------------------------------------------
+ Gradient of SCF Energy
+            1           2           3           4
+    1  -0.0000060  -0.0009464  -0.0009438   0.0018961
+    2  -0.0000060  -0.0016524   0.0016424   0.0000160
+    3   0.0000000  -0.0000000  -0.0000000  -0.0000000
+ Max gradient component =       1.896E-03
+ RMS gradient           =       9.491E-04
+ Gradient time:  CPU 0.09 s  wall 0.03 s
+ Geometry Optimization Parameters
+   NAtoms,    NIC,     NZ,  NCons,   NDum,   NFix, NCnnct, MaxDiis
+        4      17       0       0       0       0       0       0
+
+
+** GEOMETRY OPTIMIZATION IN DELOCALIZED INTERNAL COORDINATES **
+   Searching for a Minimum
+
+   Optimization Cycle:   1
+
+                       Coordinates (Angstroms)
+     ATOM                X               Y               Z
+      1  C         0.0000000000    0.0000000000    0.0000000000
+      2  H         0.5386580820    0.9329831659    0.0000000000
+      3  H         0.5386580820   -0.9329831659    0.0000000000
+      4  H        -1.0773161640    0.0000000000    0.0000000000
+   Point Group: c1    Number of degrees of freedom:     6
+
+
+   Energy is    -39.298353792
+
+
+ Attempting to generate delocalized internal coordinates
+
+  ***ERROR*** Wrong Number of Internal Coordinates
+              Should be:   6  Found:   5
+**WARNING** Problems with Internal Coordinates
+  Switching to Cartesian Coordinates
+
+ Translations and Rotations Projected Out of Hessian
+
+  6 Hessian modes will be used to form the next step
+  Hessian Eigenvalues:
+     1.000000    1.000000    1.000000    1.000000    1.000000    1.000000
+
+ Minimum search - taking simple RFO step
+ Searching for Lamda that Minimizes Along All modes
+ Value Taken    Lamda =  -0.00001081
+ Step Taken.  Stepsize is  0.003288
+
+                             Maximum     Tolerance    Cnvgd?
+         Gradient           0.001896      0.000300      NO
+         Displacement       0.001896      0.001200      NO
+         Energy change     *********      0.000001      NO
+
+ Adding empirical dispersion correction 
+ ----------------------------------------------------------------
+ Doing -D3(BJ) with
+ s6 =   1.00000
+ s8 =   0.87770
+ a1 =   0.41710
+ a2 =   2.91490
+ -D3 energy without 3body term =     -0.0058663813 hartrees
+ ----------------------------------------------------------------
+ Adding gCP correction 
+ ----------------------------------------------------------------
+ gCP energy =      0.0183557701 hartrees
+ ------------------------------------------------------
+ Correction for Bais Set Incompleteness Error in  HF-3c
+ ------------------------------------------------------
+ SRB energy =     -0.0147496336 hartrees
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.0000031561     0.0000031546     0.0000000000
+    2      H       0.5391617312     0.9338559176     0.0000000000
+    3      H       0.5391546410    -0.9338539271     0.0000000000
+    4      H      -1.0783195283    -0.0000051450     0.0000000000
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =           9.68108563 hartrees
+ There are        5 alpha and        4 beta electrons
+ Applying Cartesian multipole field
+    Component          Value
+    ---------          -----
+     (2,0,0)        1.00000E-10
+     (0,2,0)        2.00000E-10
+     (0,0,2)       -3.00000E-10
+ Nucleus-field energy     =     0.0000000019 hartrees
+ Requested basis set is MINIX
+ There are 6 shells and 8 basis functions
+ A cutoff of  1.0D-11 yielded     21 shell pairs
+ There are        39 function pairs
+ Smallest overlap matrix eigenvalue = 2.52E-01
+ Guess MOs from SCF MO coefficient file
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ Dispersion:   Grimme D3
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A unrestricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ Alpha HF Exchange    Energy =  -3.34488891297562
+ Beta HF Exchange     Energy =  -2.85789127745440
+ One-Electron (alpha) Energy = -38.26203932914088
+ One-Electron (beta)  Energy = -33.07861297031988
+ Total Coulomb        Energy =  28.56398485377511
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -39.2983620083      6.57e-05  
+ Alpha HF Exchange    Energy =  -3.34490411948979
+ Beta HF Exchange     Energy =  -2.85790241862733
+ One-Electron (alpha) Energy = -38.26193497878529
+ One-Electron (beta)  Energy = -33.07833870671266
+ Total Coulomb        Energy =  28.56363249666632
+    2     -39.2983620991      1.05e-05  
+ Alpha HF Exchange    Energy =  -3.34491353248666
+ Beta HF Exchange     Energy =  -2.85790311434124
+ One-Electron (alpha) Energy = -38.26199340026511
+ One-Electron (beta)  Energy = -33.07828444941356
+ Total Coulomb        Energy =  28.56364676372947
+    3     -39.2983621049      2.77e-06  
+ Alpha HF Exchange    Energy =  -3.34491736261632
+ Beta HF Exchange     Energy =  -2.85790208366811
+ One-Electron (alpha) Energy = -38.26202968655942
+ One-Electron (beta)  Energy = -33.07824130390436
+ Total Coulomb        Energy =  28.56364270334213
+    4     -39.2983621056      1.11e-06  
+ Alpha HF Exchange    Energy =  -3.34491984023979
+ Beta HF Exchange     Energy =  -2.85790129372342
+ One-Electron (alpha) Energy = -38.26205810373688
+ One-Electron (beta)  Energy = -33.07821265874763
+ Total Coulomb        Energy =  28.56364416290141
+    5     -39.2983621057      2.76e-07  
+ Alpha HF Exchange    Energy =  -3.34492053123553
+ Beta HF Exchange     Energy =  -2.85790101598801
+ One-Electron (alpha) Energy = -38.26206649894937
+ One-Electron (beta)  Energy = -33.07820329368307
+ Total Coulomb        Energy =  28.56364360630098
+    6     -39.2983621057      2.19e-09  Convergence criterion met
+ ---------------------------------------
+ Alpha HF Exchange    Energy =  -3.34492053123553
+ Beta HF Exchange     Energy =  -2.85790101598801
+ One-Electron (alpha) Energy = -38.26206649894937
+ One-Electron (beta)  Energy = -33.07820329368307
+ Total Coulomb        Energy =  28.56364360630098
+ SCF time:   CPU 0.31s  wall 0.00s 
+<S^2> =          0.760969781
+ Alpha HF Exchange    Energy =  -3.34492053123553
+ Beta HF Exchange     Energy =  -2.85790101598801
+ One-Electron (alpha) Energy = -38.26206649894937
+ One-Electron (beta)  Energy = -33.07820329368307
+ Total Coulomb        Energy =  28.56364360630098
+ Nuclear repulsion Energy =   9.68108562785275
+ SCF   energy in the final basis set =      -39.2983621057
+ Total energy in the final basis set =      -39.2983621057
+
+ --------------------------------------------------------------
+
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+
+ Alpha MOs
+ -- Occupied --
+-11.1194  -0.9387  -0.5683  -0.5683  -0.3967
+ -- Virtual --
+  0.6425   0.7692   0.7692
+
+ Beta MOs
+ -- Occupied --
+-11.0850  -0.8363  -0.5529  -0.5529
+ -- Virtual --
+  0.2426   0.6991   0.7904   0.7904
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)    Spin (a.u.)
+  --------------------------------------------------------
+      1 C                    -0.352257       1.248911
+      2 H                     0.117420      -0.082971
+      3 H                     0.117419      -0.082970
+      4 H                     0.117419      -0.082971
+  --------------------------------------------------------
+  Sum of atomic charges =     0.000000
+  Sum of spin   charges =     1.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                     0.00000000
+    Dipole Moment (Debye)
+         X          -0.00000374      Y          -0.00000207      Z           0.00000000
+       Tot           0.00000427
+    Quadrupole Moments (Debye-Ang)
+        XX          -7.28759764     XY           0.00001758     YY          -7.28757862
+        XZ           0.00000000     YZ           0.00000000     ZZ          -8.23505220
+    Octopole Moments (Debye-Ang^2)
+       XXX          -0.76219632    XXY          -0.00001421    XYY           0.76212872
+       YYY          -0.00004262    XXZ          -0.00000000    XYZ           0.00000000
+       YYZ           0.00000000    XZZ          -0.00001543    YZZ          -0.00001566
+       ZZZ           0.00000000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX         -13.79394819   XXXY          -0.00000440   XXYY          -4.59799292
+      XYYY          -0.00001344   YYYY         -13.79396935   XXXZ           0.00000000
+      XXYZ           0.00000000   XYYZ           0.00000000   YYYZ           0.00000000
+      XXZZ          -3.82765601   XYZZ          -0.00000837   YYZZ          -3.82766451
+      XZZZ           0.00000000   YZZZ           0.00000000   ZZZZ          -7.28686347
+ -----------------------------------------------------------------
+ Mayer SCF Bond Order, atomic valence on the diagonal:
+
+            1           2           3           4
+    1   2.9239026   0.9746340   0.9746343   0.9746343
+    2   0.9746340   0.9793285   0.0023473   0.0023473
+    3   0.9746343   0.0023473   0.9793288   0.0023472
+    4   0.9746343   0.0023473   0.0023472   0.9793288
+
+
+ Calculating analytic gradient of the SCF energy
+ ------------------------------------------------------
+ Correction for Bais Set Incompleteness Error in  HF-3c
+ ------------------------------------------------------
+ Gradient of SCF Energy
+            1           2           3           4
+    1  -0.0000019  -0.0004898  -0.0004884   0.0009800
+    2  -0.0000041  -0.0008614   0.0008507   0.0000149
+    3  -0.0000000   0.0000000   0.0000000  -0.0000000
+ Max gradient component =       9.800E-04
+ RMS gradient           =       4.920E-04
+ Gradient time:  CPU 0.11 s  wall 0.04 s
+ Geometry Optimization Parameters
+   NAtoms,    NIC,     NZ,  NCons,   NDum,   NFix, NCnnct, MaxDiis
+        4      17       0       0       0       0       0       0
+
+ Cartesian Hessian Update
+ Hessian updated using BFGS update
+
+
+** GEOMETRY OPTIMIZATION IN CARTESIAN COORDINATES **
+   Searching for a Minimum
+
+   Optimization Cycle:   2
+
+                       Coordinates (Angstroms)
+     ATOM                X               Y               Z
+      1  C         0.0000031561    0.0000031546    0.0000000000
+      2  H         0.5391617312    0.9338559176    0.0000000000
+      3  H         0.5391546410   -0.9338539271    0.0000000000
+      4  H        -1.0783195283   -0.0000051450    0.0000000000
+   Point Group: c1    Number of degrees of freedom:     6
+
+
+   Energy is    -39.298362106
+
+
+ Translations and Rotations Projected Out of Hessian
+
+  1 Hessian modes will be used to form the next step
+  Hessian Eigenvalues:
+     0.481631
+
+ Minimum search - taking simple RFO step
+ Searching for Lamda that Minimizes Along All modes
+ Value Taken    Lamda =  -0.00000603
+ Step Taken.  Stepsize is  0.003539
+
+                             Maximum     Tolerance    Cnvgd?
+         Gradient           0.000980      0.000300      NO
+         Displacement       0.002035      0.001200      NO
+         Energy change     -0.000008      0.000001      NO
+
+ Adding empirical dispersion correction 
+ ----------------------------------------------------------------
+ Doing -D3(BJ) with
+ s6 =   1.00000
+ s8 =   0.87770
+ a1 =   0.41710
+ a2 =   2.91490
+ -D3 energy without 3body term =     -0.0058642298 hartrees
+ ----------------------------------------------------------------
+ Adding gCP correction 
+ ----------------------------------------------------------------
+ gCP energy =      0.0183102590 hartrees
+ ------------------------------------------------------
+ Correction for Bais Set Incompleteness Error in  HF-3c
+ ------------------------------------------------------
+ SRB energy =     -0.0146830401 hartrees
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.0000052651     0.0000076921     0.0000000000
+    2      H       0.5397058868     0.9347988733     0.0000000000
+    3      H       0.5396851565    -0.9347920327     0.0000000000
+    4      H      -1.0793963084    -0.0000145327     0.0000000000
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =           9.67141069 hartrees
+ There are        5 alpha and        4 beta electrons
+ Applying Cartesian multipole field
+    Component          Value
+    ---------          -----
+     (2,0,0)        1.00000E-10
+     (0,2,0)        2.00000E-10
+     (0,0,2)       -3.00000E-10
+ Nucleus-field energy     =     0.0000000019 hartrees
+ Requested basis set is MINIX
+ There are 6 shells and 8 basis functions
+ A cutoff of  1.0D-11 yielded     21 shell pairs
+ There are        39 function pairs
+ Smallest overlap matrix eigenvalue = 2.53E-01
+ Guess MOs from SCF MO coefficient file
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ Dispersion:   Grimme D3
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A unrestricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ Alpha HF Exchange    Energy =  -3.34453907418466
+ Beta HF Exchange     Energy =  -2.85752962817140
+ One-Electron (alpha) Energy = -38.25430048588670
+ One-Electron (beta)  Energy = -33.07086486583711
+ Total Coulomb        Energy =  28.55745822276205
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -39.2983651414      7.06e-05  
+ Alpha HF Exchange    Energy =  -3.34455545769053
+ Beta HF Exchange     Energy =  -2.85754159913462
+ One-Electron (alpha) Energy = -38.25418856294575
+ One-Electron (beta)  Energy = -33.07056925910493
+ Total Coulomb        Energy =  28.55707894236670
+    2     -39.2983652466      1.13e-05  
+ Alpha HF Exchange    Energy =  -3.34456563075233
+ Beta HF Exchange     Energy =  -2.85754234237952
+ One-Electron (alpha) Energy = -38.25425189063812
+ One-Electron (beta)  Energy = -33.07051064865732
+ Total Coulomb        Energy =  28.55709456914378
+    3     -39.2983652534      3.00e-06  
+ Alpha HF Exchange    Energy =  -3.34456977873280
+ Beta HF Exchange     Energy =  -2.85754122543202
+ One-Electron (alpha) Energy = -38.25429121082649
+ One-Electron (beta)  Energy = -33.07046387578572
+ Total Coulomb        Energy =  28.55709014675726
+    4     -39.2983652541      1.20e-06  
+ Alpha HF Exchange    Energy =  -3.34457246851263
+ Beta HF Exchange     Energy =  -2.85754036941356
+ One-Electron (alpha) Energy = -38.25432205393783
+ One-Electron (beta)  Energy = -33.07043279723163
+ Total Coulomb        Energy =  28.55709174491097
+    5     -39.2983652543      3.00e-07  
+ Alpha HF Exchange    Energy =  -3.34457322247148
+ Beta HF Exchange     Energy =  -2.85754006675843
+ One-Electron (alpha) Energy = -38.25433121162291
+ One-Electron (beta)  Energy = -33.07042257866011
+ Total Coulomb        Energy =  28.55709113531798
+    6     -39.2983652543      2.39e-09  Convergence criterion met
+ ---------------------------------------
+ Alpha HF Exchange    Energy =  -3.34457322247148
+ Beta HF Exchange     Energy =  -2.85754006675843
+ One-Electron (alpha) Energy = -38.25433121162291
+ One-Electron (beta)  Energy = -33.07042257866011
+ Total Coulomb        Energy =  28.55709113531798
+ SCF time:   CPU 0.27s  wall 0.00s 
+<S^2> =          0.761027027
+ Alpha HF Exchange    Energy =  -3.34457322247148
+ Beta HF Exchange     Energy =  -2.85754006675843
+ One-Electron (alpha) Energy = -38.25433121162291
+ One-Electron (beta)  Energy = -33.07042257866011
+ Total Coulomb        Energy =  28.55709113531798
+ Nuclear repulsion Energy =   9.67141068987258
+ SCF   energy in the final basis set =      -39.2983652543
+ Total energy in the final basis set =      -39.2983652543
+
+ --------------------------------------------------------------
+
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+
+ Alpha MOs
+ -- Occupied --
+-11.1192  -0.9381  -0.5678  -0.5678  -0.3965
+ -- Virtual --
+  0.6410   0.7680   0.7680
+
+ Beta MOs
+ -- Occupied --
+-11.0848  -0.8357  -0.5524  -0.5524
+ -- Virtual --
+  0.2428   0.6976   0.7893   0.7893
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)    Spin (a.u.)
+  --------------------------------------------------------
+      1 C                    -0.351939       1.249346
+      2 H                     0.117315      -0.083116
+      3 H                     0.117312      -0.083115
+      4 H                     0.117312      -0.083115
+  --------------------------------------------------------
+  Sum of atomic charges =     0.000000
+  Sum of spin   charges =     1.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                     0.00000000
+    Dipole Moment (Debye)
+         X          -0.00000316      Y          -0.00000328      Z          -0.00000000
+       Tot           0.00000456
+    Quadrupole Moments (Debye-Ang)
+        XX          -7.28497484     XY           0.00005119     YY          -7.28491361
+        XZ          -0.00000000     YZ           0.00000000     ZZ          -8.23582533
+    Octopole Moments (Debye-Ang^2)
+       XXX          -0.76516178    XXY          -0.00003186    XYY           0.76506866
+       YYY          -0.00009557    XXZ          -0.00000000    XYZ          -0.00000000
+       YYZ          -0.00000000    XZZ          -0.00002616    YZZ          -0.00003841
+       ZZZ          -0.00000000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX         -13.80203717   XXXY          -0.00001486   XXYY          -4.60069931
+      XYYY          -0.00003596   YYYY         -13.80209881   XXXZ          -0.00000000
+      XXYZ           0.00000000   XYYZ           0.00000000   YYYZ           0.00000000
+      XXZZ          -3.83045902   XYZZ          -0.00002464   YYZZ          -3.83048824
+      XZZZ          -0.00000000   YZZZ           0.00000000   ZZZZ          -7.28776192
+ -----------------------------------------------------------------
+ Mayer SCF Bond Order, atomic valence on the diagonal:
+
+            1           2           3           4
+    1   2.9237345   0.9745774   0.9745785   0.9745785
+    2   0.9745774   0.9793290   0.0023758   0.0023758
+    3   0.9745785   0.0023758   0.9793298   0.0023755
+    4   0.9745785   0.0023758   0.0023755   0.9793298
+
+
+ Calculating analytic gradient of the SCF energy
+ ------------------------------------------------------
+ Correction for Bais Set Incompleteness Error in  HF-3c
+ ------------------------------------------------------
+ Gradient of SCF Energy
+            1           2           3           4
+    1  -0.0000033   0.0000011  -0.0000012   0.0000034
+    2  -0.0000037  -0.0000116   0.0000024   0.0000129
+    3  -0.0000000  -0.0000000   0.0000000   0.0000000
+ Max gradient component =       1.289E-05
+ RMS gradient           =       5.355E-06
+ Gradient time:  CPU 0.12 s  wall 0.03 s
+ Geometry Optimization Parameters
+   NAtoms,    NIC,     NZ,  NCons,   NDum,   NFix, NCnnct, MaxDiis
+        4      17       0       0       0       0       0       0
+
+ Cartesian Hessian Update
+ Hessian updated using BFGS update
+
+
+** GEOMETRY OPTIMIZATION IN CARTESIAN COORDINATES **
+   Searching for a Minimum
+
+   Optimization Cycle:   3
+
+                       Coordinates (Angstroms)
+     ATOM                X               Y               Z
+      1  C         0.0000052651    0.0000076921    0.0000000000
+      2  H         0.5397058868    0.9347988733    0.0000000000
+      3  H         0.5396851565   -0.9347920327    0.0000000000
+      4  H        -1.0793963084   -0.0000145327    0.0000000000
+   Point Group: c1    Number of degrees of freedom:     6
+
+
+   Energy is    -39.298365254
+
+
+ Translations and Rotations Projected Out of Hessian
+
+  3 Hessian modes will be used to form the next step
+  Hessian Eigenvalues:
+     0.479049    1.000004    1.000058
+
+ Minimum search - taking simple RFO step
+ Searching for Lamda that Minimizes Along All modes
+ Value Taken    Lamda =  -0.00000000
+ Step Taken.  Stepsize is  0.000022
+
+                             Maximum     Tolerance    Cnvgd?
+         Gradient           0.000013      0.000300     YES
+         Displacement       0.000013      0.001200     YES
+         Energy change     -0.000003      0.000001      NO
+
+
+                       Distance Matrix (Angstroms)
+             C (  1)   H (  2)   H (  3)
+   H (  2)  1.079403
+   H (  3)  1.079400  1.869591
+   H (  4)  1.079402  1.869590  1.869554
+
+ Final energy is   -39.298365254322377     
+
+
+ ******************************
+ **  OPTIMIZATION CONVERGED  **
+ ******************************
+
+                       Coordinates (Angstroms)
+     ATOM                X               Y               Z
+      1  C         0.0000052651    0.0000076921    0.0000000000
+      2  H         0.5397058868    0.9347988733    0.0000000000
+      3  H         0.5396851565   -0.9347920327    0.0000000000
+      4  H        -1.0793963084   -0.0000145327    0.0000000000
+
+Z-matrix Print:
+$molecule
+0 2
+C 
+H  1 1.079400
+H  1 1.079402 2 119.997580
+H  1 1.079403 2 120.001301 3 -180.000000 0
+$end
+
+
+ --------------------------------------------------------------
+
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+
+ Alpha MOs
+ -- Occupied --
+-11.1192  -0.9381  -0.5678  -0.5678  -0.3965
+ -- Virtual --
+  0.6410   0.7680   0.7680
+
+ Beta MOs
+ -- Occupied --
+-11.0848  -0.8357  -0.5524  -0.5524
+ -- Virtual --
+  0.2428   0.6976   0.7893   0.7893
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)    Spin (a.u.)
+  --------------------------------------------------------
+      1 C                    -0.351939       1.249346
+      2 H                     0.117315      -0.083116
+      3 H                     0.117312      -0.083115
+      4 H                     0.117312      -0.083115
+  --------------------------------------------------------
+  Sum of atomic charges =     0.000000
+  Sum of spin   charges =     1.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                     0.00000000
+    Dipole Moment (Debye)
+         X          -0.00000316      Y          -0.00000328      Z          -0.00000000
+       Tot           0.00000456
+    Quadrupole Moments (Debye-Ang)
+        XX          -7.28497484     XY           0.00005119     YY          -7.28491361
+        XZ          -0.00000000     YZ           0.00000000     ZZ          -8.23582533
+    Octopole Moments (Debye-Ang^2)
+       XXX          -0.76516178    XXY          -0.00003186    XYY           0.76506866
+       YYY          -0.00009557    XXZ          -0.00000000    XYZ          -0.00000000
+       YYZ          -0.00000000    XZZ          -0.00002616    YZZ          -0.00003841
+       ZZZ          -0.00000000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX         -13.80203717   XXXY          -0.00001486   XXYY          -4.60069931
+      XYYY          -0.00003596   YYYY         -13.80209881   XXXZ          -0.00000000
+      XXYZ           0.00000000   XYYZ           0.00000000   YYYZ           0.00000000
+      XXZZ          -3.83045902   XYZZ          -0.00002464   YYZZ          -3.83048824
+      XZZZ          -0.00000000   YZZZ           0.00000000   ZZZZ          -7.28776192
+ -----------------------------------------------------------------
+ Mayer SCF Bond Order, atomic valence on the diagonal:
+
+            1           2           3           4
+    1   2.9237345   0.9745774   0.9745785   0.9745785
+    2   0.9745774   0.9793290   0.0023758   0.0023758
+    3   0.9745785   0.0023758   0.9793298   0.0023755
+    4   0.9745785   0.0023758   0.0023755   0.9793298
+
+
+Archival summary:
+1\1\Lithium\OPT\HF\BasisUnspecified\13(2)\pierpa\ThuOct2212:19:332020ThuOct2212:19:332020\0\\#,OPT,HF,BasisUnspecified,\\0,2\C\H,1,1.0794\H,1,1.0794,2,119.998\H,1,1.0794,2,120.001,3,-180,0\\HF=-39.2983653\\@
+
+ Total job time:  0.51s(wall), 1.81s(cpu) 
+ Thu Oct 22 12:19:33 2020
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+

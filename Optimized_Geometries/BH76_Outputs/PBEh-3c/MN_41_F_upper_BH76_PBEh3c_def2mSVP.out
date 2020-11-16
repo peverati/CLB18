@@ -1,0 +1,338 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.2 (devel), Q-Chem, Inc., Pleasanton, CA (2019)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,  
+ S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  E. J. Berquist,  
+ K. B. Bravaya,  H. Burton,  D. Casanova,  Chun-Min Chang,  Yunqing Chen,  
+ A. Chien,  K. D. Closser,  M. P. Coons,  S. Coriani,  S. Dasgupta,  
+ A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  R. G. Edgar,  Po-Tung Fang,  
+ S. Faraji,  S. Fatehi,  Qingguo Feng,  K. D. Fenk,  J. Fosso-Tande,  
+ J. Gayvert,  Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  J. Gomes,  
+ J. Gonthier,  A. Gunina,  D. Hait,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  J. E. Herr,  
+ E. G. Hohenstein,  Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  T.-C. Jagau,  
+ Hyunjun Ji,  B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,  
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,  
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,  
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,  
+ E. Livshits,  A. Luenser,  P. Manohar,  E. Mansoor,  S. F. Manzer,  
+ Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  A. V. Marenich,  
+ T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  N. J. Mayhall,  
+ S. C. McKenzie,  J.-M. Mewes,  P. Morgante,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ J. A. Parkhill,  Zheng Pei,  T. M. Perrine,  F. Plasser,  P. Pokhilko,  
+ S. Prager,  A. Prociuk,  E. Ramos,  D. R. Rehn,  F. Rob,  M. Scheurer,  
+ M. Schneider,  N. Sergueev,  S. M. Sharada,  S. Sharma,  D. W. Small,  
+ T. Stauch,  T. Stein,  Yu-Chuan Su,  A. J. W. Thom,  A. Tkatchenko,  
+ T. Tsuchimochi,  N. M. Tubman,  L. Vogt,  M. L. Vidal,  O. Vydrov,  
+ M. A. Watson,  J. Wenzel,  M. de Wergifosse,  T. A. Wesolowski,  A. White,  
+ J. Witte,  A. Yamada,  Jun Yang,  K. Yao,  S. Yeganeh,  S. R. Yost,  
+ Zhi-Qiang You,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  Yan Zhao,  
+ Ying Zhu,  B. R. Brooks,  G. K. L. Chan,  C. J. Cramer,  M. S. Gordon,  
+ W. J. Hehre,  A. Klamt,  M. W. Schmidt,  C. D. Sherrill,  D. G. Truhlar,  
+ A. Aspuru-Guzik,  R. Baer,  A. T. Bell,  N. A. Besley,  Jeng-Da Chai,  
+ A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  B. D. Dunietz,  
+ T. R. Furlani,  Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  D. S. Lambrecht,  
+ WanZhen Liang,  C. Ochsenfeld,  V. A. Rassolov,  L. V. Slipchenko,  
+ J. E. Subotnik,  T. Van Voorhis,  J. M. Herbert,  A. I. Krylov,  
+ P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.2.0 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 8.300.2 (Tropical Shenanigans).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Mon Oct 19 11:59:02 2020  
+
+node27.cluster.fit.edu
+Host: 0
+
+     Scratch files written to /udrive/faculty/rpeverati/pierpa/qchem/scratch/qchem15183//
+NAlpha2: 10
+NElect   9
+Mult     2
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$Comment
+Geometry optimizations for CLB18.
+$End
+
+$Rem
+SYMMETRY              False
+SYM_IGNORE            True
+JOBTYPE               SP
+METHOD                PBEh-3c
+BASIS                 def2-mSVP
+MAX_SCF_CYCLES        50
+SCF_ALGORITHM         DIIS
+SCF_PRINT             1
+SCF_FINAL_PRINT       1
+XC_GRID               000099000590
+MEM_TOTAL             20000
+MEM_STATIC            4000
+BLAS3_DFT             True
+New_DFT               True
+$End
+
+$Molecule
+0 2
+F 0.0000000000 0.0000000000 0.0000000000
+$End
+
+--------------------------------------------------------------
+ Adding empirical dispersion correction 
+ ----------------------------------------------------------------
+ Doing -D3(BJ) with
+ s6 =   1.00000
+ s8 =   0.00000
+ a1 =   0.48600
+ a2 =   4.50000
+ -D3 energy including 3body term =     -0.0000000000 hartrees
+ ----------------------------------------------------------------
+ Adding gCP correction 
+ ----------------------------------------------------------------
+ gCP energy =      0.0000000000 hartrees
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      F       0.0000000000     0.0000000000     0.0000000000
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =           0.00000000 hartrees
+ There are        5 alpha and        4 beta electrons
+ Requested basis set is def2-mSVP
+ There are 7 shells and 15 basis functions
+
+ Total QAlloc Memory Limit  20000 MB
+ Mega-Array Size      3911 MB
+ MEM_STATIC part      4000 MB
+ A cutoff of  1.0D-08 yielded     28 shell pairs
+ There are       136 function pairs (       157 Cartesian)
+ Smallest overlap matrix eigenvalue = 1.17E-01
+
+ Scale SEOQF with 1.000000e+00/1.000000e+00/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 9.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Exchange:     0.4200 Hartree-Fock + 0.5800 PBEh-3c
+ Correlation:  1.0000 PBEh-3c
+ Using Euler-Maclaurin-Lebedev (99,590) quadrature formula
+ Dispersion:   Grimme D3
+ using 12 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 2.0, May 2017, Q-Chem Inc. Pleasanton 
+ -------------------------------------------------------
+ A unrestricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-05
+ Alpha HF Exchange    Energy =  -2.03048352379811
+ Beta HF Exchange     Energy =  -2.03048352379811
+ DFT Correlation      Energy =  -0.41063329854057
+ DFT Exchange         Energy =  -5.57529697604516
+ One-Electron (alpha) Energy = -69.62618108138470
+ One-Electron (beta)  Energy = -69.62618108138470
+ Total Coulomb        Energy =  49.91838371443907
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -99.3808757705      9.22e-03  
+ Alpha HF Exchange    Energy =  -2.26137274506151
+ Beta HF Exchange     Energy =  -1.93906530402754
+ DFT Correlation      Energy =  -0.40450458010648
+ DFT Exchange         Energy =  -5.58131232792524
+ One-Electron (alpha) Energy = -73.53582446826671
+ One-Electron (beta)  Energy = -65.47141726696550
+ Total Coulomb        Energy =  49.65546299017019
+    2     -99.5380337022      5.77e-03  
+ Alpha HF Exchange    Energy =  -2.27628256381512
+ Beta HF Exchange     Energy =  -1.94312697436999
+ DFT Correlation      Energy =  -0.40525435462696
+ DFT Exchange         Energy =  -5.60639136115229
+ One-Electron (alpha) Energy = -73.76187688488655
+ One-Electron (beta)  Energy = -65.52456022093851
+ Total Coulomb        Energy =  49.97672164037409
+    3     -99.5407707194      2.03e-03  
+ Alpha HF Exchange    Energy =  -2.27681236338905
+ Beta HF Exchange     Energy =  -1.93834078783956
+ DFT Correlation      Energy =  -0.40498605838181
+ DFT Exchange         Energy =  -5.60054866580108
+ One-Electron (alpha) Energy = -73.77315640304812
+ One-Electron (beta)  Energy = -65.44572038568054
+ Total Coulomb        Energy =  49.89839717315948
+    4     -99.5411674910      7.09e-04  
+ Alpha HF Exchange    Energy =  -2.27943670098294
+ Beta HF Exchange     Energy =  -1.93794359691862
+ DFT Correlation      Energy =  -0.40505906598299
+ DFT Exchange         Energy =  -5.60347796443589
+ One-Electron (alpha) Energy = -73.81188764463995
+ One-Electron (beta)  Energy = -65.43809727262932
+ Total Coulomb        Energy =  49.93468461443977
+    5     -99.5412176311      8.51e-05  
+ Alpha HF Exchange    Energy =  -2.27988484925937
+ Beta HF Exchange     Energy =  -1.93760487327165
+ DFT Correlation      Energy =  -0.40505766321451
+ DFT Exchange         Energy =  -5.60361708842977
+ One-Electron (alpha) Energy = -73.81852254359748
+ One-Electron (beta)  Energy = -65.43264787578353
+ Total Coulomb        Energy =  49.93611602393730
+    6     -99.5412188696      7.82e-06  Convergence criterion met
+ ---------------------------------------
+ Alpha HF Exchange    Energy =  -2.27988484925937
+ Beta HF Exchange     Energy =  -1.93760487327165
+ DFT Correlation      Energy =  -0.40505766321451
+ DFT Exchange         Energy =  -5.60361708842977
+ One-Electron (alpha) Energy = -73.81852254359748
+ One-Electron (beta)  Energy = -65.43264787578353
+ Total Coulomb        Energy =  49.93611602393730
+ SCF time:   CPU 4.64s  wall 0.00s 
+<S^2> =          0.751092711
+ Alpha HF Exchange    Energy =  -2.27988484925937
+ Beta HF Exchange     Energy =  -1.93760487327165
+ DFT Correlation      Energy =  -0.40505766321451
+ DFT Exchange         Energy =  -5.60361708842977
+ One-Electron (alpha) Energy = -73.81852254359748
+ One-Electron (beta)  Energy = -65.43264787578353
+ Total Coulomb        Energy =  49.93611602393730
+ Nuclear repulsion Energy =   0.00000000000000
+ SCF   energy in the final basis set =      -99.5412188696
+ Total energy in the final basis set =      -99.5412188696
+
+ Q-Chem warning in module /udrive/faculty/rpeverati/pierpa/qchem/libsym/oriorb.F, line  198:
+
+ OriOrb: Failure to resolve orbital degeneracies.
+
+
+ Q-Chem warning in module /udrive/faculty/rpeverati/pierpa/qchem/libsym/oriorb.F, line  198:
+
+ OriOrb: Failure to resolve orbital degeneracies.
+
+
+ --------------------------------------------------------------
+
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+
+ Alpha MOs
+ -- Occupied --
+-25.1814  -1.3439  -0.6306  -0.5368  -0.5368
+ -- Virtual --
+  1.1103   1.1687   1.1687   1.2006   1.2110   1.2110   1.2441   1.2441
+  1.7423  31.8923
+
+ Beta MOs
+ -- Occupied --
+-25.1469  -1.2283  -0.4989  -0.4989
+ -- Virtual --
+ -0.1682   1.1896   1.1896   1.2478   1.2478   1.2487   1.2535   1.2535
+  1.2621   1.7974  31.9389
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)    Spin (a.u.)
+  --------------------------------------------------------
+      1 F                     0.000000       1.000000
+  --------------------------------------------------------
+  Sum of atomic charges =     0.000000
+  Sum of spin   charges =     1.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -0.0000
+    Dipole Moment (Debye)
+         X      -0.0000      Y       0.0000      Z       0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX      -4.7273     XY       0.0000     YY      -4.7273
+        XZ      -0.0000     YZ      -0.0000     ZZ      -3.8851
+    Octopole Moments (Debye-Ang^2)
+       XXX      -0.0000    XXY       0.0000    XYY      -0.0000
+       YYY       0.0000    XXZ       0.0000    XYZ      -0.0000
+       YYZ       0.0000    XZZ      -0.0000    YZZ      -0.0000
+       ZZZ       0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX      -2.5193   XXXY       0.0000   XXYY      -0.8398
+      XYYY       0.0000   YYYY      -2.5193   XXXZ      -0.0000
+      XXYZ      -0.0000   XYYZ      -0.0000   YYYZ      -0.0000
+      XXZZ      -0.7220   XYZZ       0.0000   YYZZ      -0.7220
+      XZZZ      -0.0000   YZZZ      -0.0000   ZZZZ      -1.8136
+ -----------------------------------------------------------------
+ Mayer SCF Bond Order, atomic valence on the diagonal:
+
+            1
+    1  -0.0000000
+
+
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   298.15 K  AND     1.00 ATM
+
+   Translational Enthalpy:        0.889 kcal/mol
+   Rotational Enthalpy:           0.000 kcal/mol
+   Vibrational Enthalpy:          0.000 kcal/mol
+   gas constant (RT):             0.592 kcal/mol
+   Translational Entropy:        34.767  cal/mol.K
+   Rotational Entropy:            0.000  cal/mol.K
+   Vibrational Entropy:           0.000  cal/mol.K
+
+   Total Enthalpy:                1.481 kcal/mol
+   Total Entropy:                34.767  cal/mol.K
+
+ -----------------------------------------------------------------
+
+Archival summary:
+1\1\node27.cluster.fit.edu\SP\ProcedureUnspecified\BasisUnspecified\1(2)\rpeverat\MonOct1911:59:032020MonOct1911:59:032020\0\\#,ProcedureUnspecified,BasisUnspecified,\\0,2\F\\\@
+
+ Total job time:  0.93s(wall), 5.96s(cpu) 
+ Mon Oct 19 11:59:03 2020
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
